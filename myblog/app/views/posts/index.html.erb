@@ -7,6 +7,7 @@
     <% @posts.each do |post| %>
       <div class = "post_wrapper">
       <h2 class ="title"><%=link_to post.title,post%></h2>
-      <p class ="date"><%= post.created_at.strftime("%B,%d,%Y")%></p>
+      <p class ="date"><%= post.created_at.strftime("%B,%d,%Y	")%></p>
       </div>
       <%end%>	
+      <%= link_to 'New post', new_post_path %>
